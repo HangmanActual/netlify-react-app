@@ -11,16 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-@font-face {
-  font-family: "TypewriterBold";
-  src: local("TypewriterBold"), 
-    url("./fonts/TypewriterBold.otf") format ("opentype");
-}
-
-@font-face {
-  font-family: "Digital7";
-  src: local("Digital7"),
-    url("./fonts/Digital7.ttf") format("truetype");
-  font-weight: bold;
-}

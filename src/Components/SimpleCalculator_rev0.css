@@ -1,0 +1,142 @@
+/*
+// Root element of a Component considers viewport as their sizing ref.
+*/
+
+* {
+    box-sizing: border-box;
+    box-shadow: none;
+}
+
+
+:root { /*Calculator Only*/
+    --calculator-width: 50vw;
+    --calculator-height: 85vh;
+    --calculator-v-margin: calc((100vh - var(--calculator-height))/2);
+}
+
+#calculator {
+    border: none;
+    background: #000000;
+    width: max(var(--calculator-width), 500px);
+    height:var(--calculator-height);
+    margin: var(--calculator-v-margin) auto;
+    padding: 10px 0;
+}
+
+    :root { /*Display & Interface*/
+        --display-width: 95%;
+        --display-height: 20%;
+        --display-top-margin: 0;
+
+        --interface-height: calc(100% - var(--display-height));
+        --interface-v-margin: calc((100% - var(--interface-height))/2);
+    }
+
+    #displayScreen {
+        border: none;
+        background: none;
+        width: var(--display-width);
+        height: var(--display-height);
+        margin: var(--display-top-margin) auto 0 auto;
+    }
+
+        .display {
+            text-align: right;
+        }
+
+        #displayedWork {
+            border: none;
+            position: relative;
+            top: 0;
+            height: 20%;
+            margin: 0 10px 10px 0;
+            color: #cdcdcd;
+            font-size: 16px;
+        }
+
+        #displayedValue {
+            border: none;
+            margin: 0;
+            color: white;
+            height: auto;
+            font-size: 50px;
+            margin-right: 10px;
+        }
+
+        #displayedTests{
+            border: none;
+            margin: 0;
+            color: white;
+            height: auto;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+    #interface {
+        border: none;
+        background: none;
+        width: 95%;
+        height: var(--interface-height);
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas:
+            "top1 top1 top1 right"
+            "top2 top2 top2 right"
+            "left left left right"
+            "left left left right"
+            "left left left right"
+            "left left left right";
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+        #numbersContainer { /*Flexbox*/
+            border: none;
+            width: 100%;
+            grid-area: left;    
+            display: flex;
+            flex-direction: column;
+        }
+
+            .numberButtonContainer { /*Flexbox*/
+                border: none;
+                height: 100%;
+                flex-grow: 1;
+                display: flex; /*Flexbox tells children to fill vertically.*/
+                justify-content: space-evenly;
+            }
+
+                .numberButton {
+
+                    width: 33.3333%;
+                    height: 100%;
+                }
+
+                #zero {
+                    width: 66.6667%;
+                } 
+
+        #operators_rightColumn { /*Flexbox*/
+            border: none;
+            grid-area: right;
+            display: flex;
+            flex-direction: column;
+        } 
+
+        #operators_topRowOne {
+            border: none;
+            grid-area: top1;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        #operators_topRowTwo{
+            border: none;
+            grid-area: top2;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+            .operatorButton {
+                flex-basis: 100%;
+            }
