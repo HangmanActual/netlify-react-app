@@ -6,3 +6,6 @@
 - Removed .circleci folder;
 - Manually clicked "deploy" button in Netlify;
 - Worked.
+
+[Log 2]
+Why do I need CircleCI? I'm doing fine without it.
