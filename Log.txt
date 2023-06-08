@@ -1,0 +1,8 @@
+[Log 1, type=error]
+- Had errors with CircleCI;
+- Forums from Sept-2022 show many users having same issues;
+- Created new branch without CircleCI;
+- Pushed to GitHub;
+- Removed .circleci folder;
+- Manually clicked "deploy" button in Netlify;
+- Worked.
