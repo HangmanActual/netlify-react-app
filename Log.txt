@@ -9,3 +9,7 @@
 
 [Log 2]
 Why do I need CircleCI? I'm doing fine without it.
+
+[Log 3]
+- Trying to deploy simple-calculator, but keep getting error on something about babel;
+- Works on local server just fine.
